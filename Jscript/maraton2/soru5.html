@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider {
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+    </div>
+    <button onclick="Geri()">GERİ</button>
+    <button onclick="İleri()">İLERİ</button>
+</body>
+
+</html>
+<script>
+    var resimler = ["1.jpg", "2.jpg", "3.jpg"];
+    var sayac = 0;
+    function Geri() {
+        sayac = Number(sayac) - Number(1)
+        if (sayac == -1) {
+            sayac = 2
+        }
+        document.getElementById("slider").style.backgroundImage = 'url("' + resimler[sayac] + '")'
+    }
+    function İleri() {
+        sayac = Number(sayac) + Number(1)
+        if (sayac == 3) {
+            sayac = 0
+        }
+        document.getElementById("slider").style.backgroundImage = 'url("' + resimler[sayac] + '")'
+    }
+    document.getElementById("slider").style.backgroundImage = 'url("' + resimler[sayac] + '")';
+    sayac = Number(sayac) + Number(1)
+    setInterval(() => {
+        
+        document.getElementById("slider").style.backgroundImage = 'url("' + resimler[sayac] + '")';
+        sayac++;
+        if (sayac == 3) {
+            sayac = 0
+        }
+    }, 5000);
+</script>

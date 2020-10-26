@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+    </div>
+    <button id="radiosec">BooooooooooooooooM</button>
+
+</body>
+
+</html>
+<script>
+    $('input[type="radio"]').on('change', function () {
+        // 1. yol
+        // var x = $('input[name=gender]:checked').val();
+        var x = $(this).val()
+        console.log(x)
+    });
+    $("#radiosec").click(function(){
+        var y = $('input[name=gender]:checked').val()
+        if(y != undefined){
+            console.log(y)
+        }
+    })
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <select name="" id="city">
+            <option value="1">Ankara</option>
+            <option value="2">İstanbul</option>
+            <option value="3">İzmir</option>
+        </select>
+    </div>
+</body>
+</html>
+<script>
+    $(document).on("change","#city",function(){
+
+        // 1. yol
+        var secilen = $(this).children("option:selected").val()
+        var x = $(this).children("option:selected").html();
+
+        // 2. yol
+        var secilen2 = $(this).val()
+        console.log(x)
+        console.log(secilen)
+    })
+</script>

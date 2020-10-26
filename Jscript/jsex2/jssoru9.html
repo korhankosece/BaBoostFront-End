@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var saat = Number(document.getElementById("girdi1").value);
+        if (saat <= 0) {
+            alert("Yanlış Girdiniz");
+        }
+        else {
+            if (saat < 24) {
+                alert("Borcunuz " + saat + "TL");
+            }
+            else {
+                var gun = Math.floor(saat / 24)
+                var borc = gun * 20
+                alert("Borcunuz " + borc  + "TL");
+            }
+        }
+    }
+
+
+</script>

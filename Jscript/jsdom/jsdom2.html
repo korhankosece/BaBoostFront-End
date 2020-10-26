@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <button onclick="Degis()">Boyut Degistir</button>
+    <button onclick="Yok()">DESTROY!!!!</button>
+</body>
+</html>
+<script>
+    function Degis(){
+        document.getElementById("content").style.width="400px";
+        document.getElementById("content").style.height="400px";
+    }
+    function Yok(){
+        document.getElementById("content").style.display="none"
+    }
+</script>

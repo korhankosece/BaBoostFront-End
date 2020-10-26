@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="city">
+    </div>
+    <div>
+        <button onclick="AddCity()">Ekle</button>
+    </div>
+</body>
+</html>
+<script>
+
+    function AddCity(){
+        var city =document.getElementById("city").value;
+        sehirler.push(city);
+    }
+    var sehir = "Berlin";
+    var sehir2 = "Paris";
+    var sehir3 = "Edirne";
+
+    var sayilar = [-2,44,11,4.5,-9.87]
+    var sehirler = ["izmir","istanbul","trabzon","diyarbakır","urfa"]
+
+    //dizi fonksiyonları,özellikleri
+
+    //1) sehirler dizisi kaç elemanlı
+    console.log(sehirler.length);
+
+    //2) dizinin 4.elemanını yazdır
+    console.log(sehirler[3]);
+
+    //3) sayıalr dizisini sırala
+    console.log(sehirler.sort(function(a,b){return a-b}));
+
+    //4) sehirler dizisi ters çevir
+    console.log(sehirler.reverse());
+
+    //5) belirli bir kuralda elemanları yakala
+    console.log(sehirler.slice(2,4));
+
+    //6) belirli bir kuralda elemanları yakala
+    console.log(sehirler.includes("izmir"));
+
+    //7) belirli bir kuralda elemanları yakala
+    console.log(sehirler.indexOf("izmir"));
+
+    //7) belirli bir kuralda elemanları yakala
+    console.log(sehirler.indexOf("izmir"));
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var sıcaklık = Number(document.getElementById("girdi1").value);
+        if (sıcaklık>0 && sıcaklık<100) {
+            alert("SIVI");
+            }
+        else{
+            if(sıcaklık>=100){
+                alert("GAZ");
+            }
+            else{
+                alert("KATI");
+            }
+        }
+    }
+
+
+</script>

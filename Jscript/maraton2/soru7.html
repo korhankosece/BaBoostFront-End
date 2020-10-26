@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <div id="box2">
+
+        </div>
+    </div>
+    <input type="radio" onclick="Buyuk()" id="buyuk" name="degis" value="bir">
+    <label for="bir">BÜYÜK</label><br>
+    <input type="radio" onclick="Kucuk()" id="kucuk" name="degis" value="iki">
+    <label for="iki">KÜÇÜK</label><br>
+    <div>
+        <label for="">Genislik</label>
+        <input id="genis" type="text">
+        <label for="">Uzunluk</label>
+        <input id="uzun" type="text">
+        <button onclick="Degis()">BOOOOM!</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function Buyuk() {
+        document.getElementById("box2").style.zIndex = -1
+    }
+    function Kucuk() {
+        document.getElementById("box2").style.zIndex = 1
+    }
+
+    function Degis() {
+        if (document.getElementById("box2").style.zIndex == 1) {
+            document.getElementById("box2").style.width = document.getElementById("genis").value + "px"
+            document.getElementById("box2").style.height = document.getElementById("uzun").value + "px"
+        }
+        if (document.getElementById("box2").style.zIndex == -1) {
+            document.getElementById("box1").style.width = document.getElementById("genis").value + "px"
+            document.getElementById("box1").style.height = document.getElementById("uzun").value + "px"
+        }
+    }
+</script>

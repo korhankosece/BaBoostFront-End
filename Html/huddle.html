@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KorhanHuddle</title>
+    <style>
+        @font-face {
+            font-family: SpaceMono;
+            src: url(./fonts/SpaceMono-Regular.woff);
+        }
+
+        @font-face {
+            font-family: SpaceMonoBold;
+            src: url(./fonts/SpaceMono-Bold.woff);
+        }
+
+        body {
+            padding: 38px;
+            margin: 0px;
+            background-color: #2afadf;
+            background-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%);
+
+            font-family: SpaceMono;
+            text-decoration: none solid rgb(78, 80, 77);
+            color: #4e504d;
+        }
+
+        .header {
+            height: 377px;
+            background-color: white;
+            padding: 60.8px 0px 38px 0px;
+
+        }
+
+        .div1 {
+            height: 278px;
+
+            margin: 0px 59px 0px 59px;
+            text-align: center;
+        }
+
+        .div1 h1 {
+            margin: 0px 0px 60.8px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 49px;
+        }
+
+        .div1 h2 {
+            margin: 0px 0px 61px 0px;
+            font-size: 33.75px;
+            font-weight: 700;
+            line-height: 33.75px;
+            font-family: SpaceMonoBold;
+        }
+
+        .div1 p {
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 30.4px;
+            margin: 0px;
+        }
+
+        #pmargin {
+            margin: 0px 0px 15px 0px;
+        }
+
+        .main {
+            background-color: white;
+        }
+
+        .section {
+            padding: 38px 0px 61px 0px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1100px;
+        }
+
+        .section img {
+            width: 100%;
+            text-align: center;
+            margin: 61px 0 61px 0;
+        }
+
+        .div2 {
+            display: flex;
+            margin: 0 -23px 0 -23px;
+            height: 150.375px;
+            justify-content: space-between;
+            line-height: 30.4px;
+        }
+
+        .div2 img {
+            height: 30px;
+            width: 31.6562px;
+            margin: 0 0 15px 0;
+            max-width: 100%;
+        }
+
+        .div2 div {
+            height: 135.188px;
+            width: 371.281px;
+            margin: 15px 0 0 0;
+            padding: 0px 23px 0 23px;
+            min-height: auto;
+            max-width: 33.3333%;
+            min-width: auto;
+        }
+
+        .div2 p {
+            font-size: 19px;
+            height: 90px;
+            width: 325.688px;
+            margin: 0px;
+        }
+
+        .section2 {
+            padding: 61px 0 61px 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1100px;
+        }
+
+        .section2 h3 {
+            font-family: SpaceMonoBold;
+            height: 25px;
+            font-size: 25.327px;
+            font-weight: 700;
+            text-align: center;
+            word-spacing: 0px;
+            margin: 0px 0px 15px 0px;
+        }
+
+        .div3 {
+            text-align: center;
+            height: 207.234px;
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .div3 div {
+            height: 169.243px;
+            text-align: center;
+            margin: 38px 0 0 0;
+            padding-left: 0 23px 0 23px;
+            min-height: auto;
+            max-width: 16.6667%;
+            min-width: auto;
+        }
+
+        .div3 img {
+            vertical-align: middle;
+            word-spacing: 0px;
+            height: 139, 781px;
+            width: 140.047px;
+            max-width: 100%;
+        }
+
+        .section3 {
+            max-width: 1100px;
+            padding: 61px 0 61px 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section3 h3 {
+            font-size: 25.327px;
+            font-weight: 700;
+            line-height: 25.327px;
+            text-align: center;
+            word-spacing: 0px;
+            height: 25px;
+            margin: 0 0 38px 0;
+        }
+
+        .div4 {
+            height: 132px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .div4 img {
+            width: 165px;
+            height: 55px;
+            margin: 15px 15px 15px 15px;
+        }
+
+        .section4 {
+            max-width: 1100px;
+            padding: 38px 0 61px 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section4 h3 {
+            font-family: SpaceMonoBold;
+            height: 25px;
+            margin: 0 0 38px 0;
+            font-weight: 700;
+            font-size: 25.327px;
+            line-height: 25.327px;
+            text-align: center;
+        }
+
+        .div5 {
+            height: 150.375px;
+            justify-content: space-between;
+            display: flex;
+            margin: 0px -23px 0 -23px;
+        }
+
+        .div5 div {
+            height: 135.188px;
+            margin: 15px 0 0 0;
+            padding: 0px 23px 0 23px;
+            min-width: auto;
+            min-height: auto;
+            max-width: 33.3333%;
+        }
+
+        .div5 p {
+            height: 90px;
+            width: 325.688px;
+            margin: 0px;
+            font-size: 19px;
+            line-height: 30.4px;
+        }
+
+        .div5 span {
+            font-size: 19px;
+            font-family: SpaceMonoBold;
+            font-weight: 700;
+        }
+
+        .section5 {
+            padding: 61px 0 61px 0;
+            margin-left: 5%;
+            margin-right: 5%;
+            text-align: center;
+        }
+
+        .section5 p {
+            font-size: 25.327px;
+            height: 50px;
+            margin: 0 0 38px 0;
+        }
+
+        .section5 #sc5a1 {
+            font-size: 19px;
+            font-weight: 700;
+            white-space: nowrap;
+            height: 66.1275px;
+            width: 275.688px;
+            border: 1px solid #AAACA9;
+            padding: 18px 38px 16px 38px;
+            border-radius: 7px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .section5 #sc5a2 {
+            font-size: 19px;
+            font-weight: 700;
+            white-space: nowrap;
+            height: 66.1275px;
+            width: 275.688px;
+            border: 1px solid #4C83FF;
+            padding: 18px 38px 16px 38px;
+            border-radius: 7px;
+            text-decoration: none;
+            color: white;
+            background-color: #4C83FF;
+
+
+        }
+
+        .section5 span {
+            display: block;
+            font-size: 14.25px;
+            height: 14px;
+            margin-top: 30px
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-family: SpaceMono;
+            height: auto;
+            width: auto;
+            font-size: 19px;
+            color: #4C83FF;
+
+
+        }
+
+        li {
+            display: flex;
+            height: 33px;
+            width: 131px;
+            margin: 15px 15px 15px 15px;
+        }
+
+        ul {
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+        li img {
+            height: 30px;
+            width: 37.5px;
+        }
+
+        .div6 p {
+            font-size: 14px;
+            text-align: center;
+            height: 14px;
+            color: #7c7f7a;
+        }
+
+        .div6 p a {
+            color: #4c83ff;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin: 38px 0 0 0;
+            padding: 0 0 61px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="div1">
+            <h1><img src="https://demos.onepagelove.com/html/huddle/img/logo.svg" alt=""></h1>
+            <h2>The mobile app conference for everyone else.</h2>
+            <p id="pmargin">14 - 19 March 2019</p>
+            <p>Stockholm, Sweden</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="section">
+            <img src="https://demos.onepagelove.com/html/huddle/img/presentor.jpg" alt="">
+            <div class="div2">
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/bucket.svg" alt="">
+                    <p>Equidem soleo etiam quod uno Graeci, si aliter non possum idem pluribus.</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/flask.svg" alt="">
+                    <p>Nonne videmus quanta perturbatio rerum omnium consequatur quanta.</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/aircraft.svg" alt="">
+                    <p>Hoc enim constituto in philosophia constituta sunt omnia aliter possum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <h3>The talkers</h3>
+            <div class="div3">
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/woman1.jpg" alt="">
+                    <p>Alyssa Long</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/man1.jpg" alt="">
+                    <p>Jonathan Foster</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/woman2.jpg" alt="">
+                    <p>Kiara Taylor</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/man2.jpg" alt="">
+                    <p>Elijah Rhodes</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/woman3.jpg" alt="">
+                    <p>Anita Gonzalez</p>
+                </div>
+                <div>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/man3.jpg" alt="">
+                    <p>Adrian Sosa</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="section3">
+            <h3>Some generous peeps</h3>
+            <div class="div4">
+                <img src="https://demos.onepagelove.com/html/huddle/img/stripe.svg" alt="">
+                <img src="https://demos.onepagelove.com/html/huddle/img/segment.svg" alt="">
+                <img src="https://demos.onepagelove.com/html/huddle/img/newrelic.svg" alt="">
+                <img src="https://demos.onepagelove.com/html/huddle/img/drift.svg" alt="">
+                <img src="https://demos.onepagelove.com/html/huddle/img/zopim.svg" alt="">
+            </div>
+
+        </div>
+        <div class="section4">
+            <h3>On the record</h3>
+            <div class="div5">
+                <div>
+                    <p>This conference changed my life because I found my wife there.</p>
+                    <Span>> Randy Johnson</Span>
+                </div>
+                <div>
+                    <p>It takes a really long time to get to this event. Worth it? Maybe.</p>
+                    <span>> Jill Carson</span>
+                </div>
+                <div>
+                    <p>Sometimes I like to be glamorous. It makes me feel good inside.</p>
+                    <span>> Chase Harrop</span>
+                </div>
+            </div>
+        </div>
+        <div class="section5">
+            <p>Tickets start at $950.</p>
+            <a id="sc5a1" href="#">Download Schedule</a>
+            <a id="sc5a2" href="#">Get a ticket →</a>
+            <span>Tickets available on Eventbrite.</span>
+        </div>
+        <div class="footer">
+            <ul>
+                <li>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/twitter.svg" alt="">
+                    <a href="#">Twitter</a>
+                </li>
+                <li>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/facebook.svg" alt="">
+                    <a href="#">Facebook</a>
+                </li>
+                <li>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/instagram.svg" alt="">
+                    <a href="#">Instagram</a>
+                </li>
+                <li>
+                    <img src="https://demos.onepagelove.com/html/huddle/img/youtube.svg" alt="">
+                    <a href="#">YouTube</a>
+                </li>
+            </ul>
+            <div class="div6">
+                <p>Design by
+                    <a href="">Papaya</a>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

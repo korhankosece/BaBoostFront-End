@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <div class="custom-select" style="width:200px;">
+        <select>
+
+        </select>
+    </div>
+    <div class="comments">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    var url = "https://jsonplaceholder.typicode.com/posts"
+    var url1 = "https://jsonplaceholder.typicode.com/comments"
+    $.getJSON(url, function (data) {
+        data.forEach(element => {
+            $("select").append(
+                `<option value ="` + element.id + `">` + element.title + `</option>`
+            )
+        });
+    });
+
+    $(document).on("change", "select", function () {
+        var secilen = $(this).children("option:selected").val()
+        $(".comments").empty()
+        $.getJSON(url1, function (data) {
+            data.forEach(element => {
+                if (secilen == element.postId) {
+                    $(".comments").append(
+                        `<h1>` + element.name + `</h1>
+                            <p>` + element.body + `<p>`
+                    )
+                }
+            });
+        });
+    })
+</script>

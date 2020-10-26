@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores minima fugit sequi commodi
+        tempore aspernatur est recusandae facilis architecto, quia quo magnam quam natus? Facilis rem quod modi sit
+        dolorum.
+    </p>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores minima fugit sequi commodi
+        tempore aspernatur est recusandae facilis architecto, quia quo magnam quam natus? Facilis rem quod modi sit
+        dolorum.
+    </p>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores minima fugit sequi commodi
+        tempore aspernatur est recusandae facilis architecto, quia quo magnam quam natus? Facilis rem quod modi sit
+        dolorum.
+    </p>
+
+    <button onclick="RenkDegis()">BOooommmmMMMMMMMMMMM</button>
+</body>
+
+</html>
+<script>
+    
+    // var x = 0
+    // function RenkDegis() {
+    //     if (x%2==0) {
+    //         $(".content").css("color", "red")
+    //         x++
+    //     }
+    //     else {
+            
+    //         $(".content").css("color", "black")
+    //         x++
+    //     }
+    // }
+    
+    
+    var status = 0; 
+    function RenkDegis() {
+        if (status == 0 ) {
+            $(".content").css("color", "red");
+            status = 1;
+        }
+        else {
+            $(".content").css("color", "black");
+            status = 0;
+        }
+    }
+
+
+</script>

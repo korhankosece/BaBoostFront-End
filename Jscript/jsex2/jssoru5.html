@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <input type="text" id="girdi2">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var fiyat1 = document.getElementById("girdi1").value;
+        var fiyat2 = document.getElementById("girdi2").value;
+        var sonuc = Number(fiyat2) + Number(fiyat1)
+
+        if (sonuc>=200) {
+            var fiyat3 = fiyat2*0.25;
+            var sonuc2 = Number(fiyat2) + Number(fiyat1) - Number(fiyat3);
+            alert("Borcunuz "+ sonuc2 + " TL");
+        }
+        else {
+            alert("Borcunuz "+ sonuc + " TL");
+            }
+
+        
+    }
+
+
+</script>

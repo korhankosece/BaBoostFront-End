@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    <ul>
+
+    </ul>
+</body>
+</html>
+<script>
+ var url = "https://ergast.com/api/f1/2004/results.json"
+    $.getJSON(url, function (data) {
+        for(i=0;i<data.MRData.RaceTable.Races.length;i++){
+            $("ul").append("<li>"+data.MRData.RaceTable.Races[i].raceName+"</li>")
+        }
+    })
+
+</script>

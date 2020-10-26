@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <div><label for="">RENK GİR KOÇUM</label><input id="girdi1" type="text"></div>
+    <div><label for="">BG RENK GİR</label><input id="girdi2" type="text"></div>
+    <button onclick="renk()">BOooom</button>
+    <button onclick="renk1()">Booooooom</button>
+    <p id="yazi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam officia esse sit, minus repudiandae qui reprehenderit ex. Ducimus perspiciatis ipsum, laboriosam repellendus aut expedita! Saepe nobis ex quisquam quas quos.</p>
+</body>
+</html>
+<script>
+    function renk(){
+        document.getElementById("yazi").style.color = document.getElementById("girdi1").value
+    }
+    function renk1(){
+        document.getElementById("yazi").style.backgroundColor = document.getElementById("girdi2").value
+    }
+</script>

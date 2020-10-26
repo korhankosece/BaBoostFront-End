@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="unitprice">UnitPrice</label>
+            <input type="text" class="form-control" id="unitprice" placeholder="UnitPrice">
+        </div>
+        <div class="form-group">
+            <label for="unitsinstock">UnitinStock</label>
+            <input type="text" class="form-control" id="unitsinstock" placeholder="UnitinStock">
+        </div>
+        <div class="form-group">
+            <label for="supplierid">SupplierId</label>
+            <input type="text" class="form-control" id="supplierid" placeholder="SupplierId">
+        </div>
+        <div class="form-group">
+            <label for="categoryid">CategoryId</label>
+            <input type="text" class="form-control" id="categoryid" placeholder="CategoryId">
+        </div>
+        <button class="btn btn-primary">Add</button>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    
+    
+    $(".btn-primary").click(function () {
+
+        var data = new Object()
+
+        data.name = $("#name").val()
+        data.unitPrice = $("#unitprice").val()
+        data.unitsInStock = $("#unitsinstock").val()
+        data.supplierId = $("#supplierid").val()
+        data.categoryId = $("#categoryid").val()
+
+        $.ajax({
+            url: "https://northwind.now.sh/api/products",
+            type: "POST",
+            data: data,
+            success: function () {
+                alert("DATA EKLENDİ!");
+            }
+        })
+    })
+
+
+</script>

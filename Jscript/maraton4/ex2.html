@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    //     $.getJSON(url, function(data) {
+    //         console.log(data.length);
+    //     });
+
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    // $.getJSON(url, function (data) {
+    //     var sayac = 0;
+    //     data.forEach(element => {
+    //         if (element.email.includes(".biz")) {
+    //             sayac++
+    //         }
+    //     }); console.log(sayac)
+    // });
+
+
+    // var url = "https://jsonplaceholder.typicode.com/posts";
+    // $.getJSON(url, function (data) {
+
+
+    //     console.log(data.length)
+    // });
+
+
+    // var url = "https://jsonplaceholder.typicode.com/photos";
+    // $.getJSON(url, function (data) {
+
+
+    //     console.log(data.length)
+    // });
+
+    // YOOOOOOOOOOOOOOOOOOOOL 1
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    // var url2 = "https://jsonplaceholder.typicode.com/posts";
+    // var ids = []
+    // var count = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.userId) {
+    //                 sayac++
+    //             }
+    //         })
+    //         count.push(sayac)
+    //     }
+    //     console.log(count)
+    //     var max = Math.max(Number(...count))
+    //     console.log("En çok post atan kullanıcı id: " + ids[count.indexOf(max)])
+    // });
+
+    // YOOOOOOOOOOOOOOOOOOOOL 2
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    // var url2 = "https://jsonplaceholder.typicode.com/posts";
+    // var ids = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     var sayac1 = -1
+    //     var kullaniciId
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.userId) {
+    //                 sayac++
+    //             }
+    //         })
+    //         if (sayac > sayac1) {
+    //             sayac = sayac1;
+    //             kullaniciId = ids[i];
+    //         }
+    //     }
+    //     console.log("En çok post atan kullanıcı id: " + kullaniciId)
+    // });
+
+    // YOOOOOOOOOOOOOOOOOOOOL 3
+
+    // var url = "https://jsonplaceholder.typicode.com/posts";
+    // var ids = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         if(!ids.includes(element.userId))
+    //         {ids.push(element.userId)}
+    //     });
+    //     var sayac1 = -1
+    //     var kullaniciId
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.userId) {
+    //                 sayac++
+    //             }
+    //         })
+    //         if (sayac > sayac1) {
+    //             sayac = sayac1;
+    //             kullaniciId = ids[i];
+    //         }
+    //     }
+    //     console.log("En çok post atan kullanıcı id: " + kullaniciId)
+    // });
+
+
+    // var url = "https://jsonplaceholder.typicode.com/posts";
+    // var url2 = "https://jsonplaceholder.typicode.com/comments";
+    // var ids = []
+    // var count = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.postId) {
+    //                 sayac++
+    //             }
+    //         })
+    //         count.push(sayac)
+    //     }
+    //     var max = Math.max(Number(...count))
+    //     console.log(max)
+    // });
+
+
+    // var url = "https://jsonplaceholder.typicode.com/albums";
+    // var url2 = "https://jsonplaceholder.typicode.com/photos";
+    // var ids = []
+    // var count = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.albumId) {
+    //                 sayac++
+    //             }
+    //         })
+    //         count.push(sayac)
+    //     }
+    //     var max = Math.max(Number(...count))
+    //     console.log(max)
+    // });
+
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    // var url2 = "https://jsonplaceholder.typicode.com/todos";
+    // var ids = []
+    // var count = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.userId) {
+    //                 if (element.completed == false) {
+    //                     sayac++
+    //                 }
+    //             }
+    //         })
+    //         count.push(sayac)
+    //     }
+    //     var max = Math.max(...count)
+    //     console.log(count)
+    //     console.log(max)
+    //     console.log("En tembel kullanıcı id: "+ ids[count.indexOf(max)])
+    // });
+
+    // YOOOOOOOOOOOOOOOOOOOOL 1
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    // var url2 = "https://jsonplaceholder.typicode.com/todos";
+    // var ids = []
+    // var count = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.userId) {
+    //                 if (element.completed == true) {
+    //                     sayac++
+    //                 }
+    //             }
+    //         })
+    //         count.push(sayac)
+    //     }
+    //     var max = Math.max(...count)
+    //     console.log(count)
+    //     console.log(max)
+    //     console.log("En çalışkan kullanıcı id: "+ ids[count.indexOf(max)])
+    // });
+
+    // YOOOOOOOOOOOOOOOOOOOOL 2
+
+    // var url = "https://jsonplaceholder.typicode.com/users";
+    // var url2 = "https://jsonplaceholder.typicode.com/todos";
+    // var ids = []
+    // $.getJSON(url, function (data) {
+    //     data.forEach(element => {
+    //         ids.push(element.id)
+    //     });
+    // });
+    // console.log(ids)
+    // $.getJSON(url2, function (data) {
+    //     var sayac1 = 0
+    //     var kullaniciId
+    //     for (i = 0; i < ids.length; i++) {
+    //         var sayac = 0
+    //         data.forEach(element => {
+    //             if (ids[i] == element.userId) {
+    //                 if (element.completed == true) {
+    //                     sayac++
+    //                 }
+    //             }
+    //         })
+    //         if(sayac > sayac1){
+    //             sayac = sayac1;
+    //             kullaniciId = ids[i];
+    //         }
+    //     }
+    //     console.log("En çalışkan kullanıcı id: "+ kullaniciId)
+    // }); 
+
+
+</script>

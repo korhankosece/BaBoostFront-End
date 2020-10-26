@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="text" id="pwd">
+    <button onclick="Login()">Giriş</button>
+
+</body>
+</html>
+<script>
+    function Login(){
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("pwd").value;
+   
+
+        if(name == "korhan" && password == "123"){
+            alert("Giriş başarılı")
+
+        }
+        else{
+            alert("Hatalı Giriş!")
+        }
+    }
+    // Korhan
+    console.log(typeof function myFunc(){})
+</script>

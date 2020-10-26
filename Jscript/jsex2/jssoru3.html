@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <input type="text" id="girdi2">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var not1 = document.getElementById("girdi1").value;
+        var not2 = document.getElementById("girdi2").value;
+        var ort = (Number(not1) + Number(not2)) / 2
+
+        if (ort < 0 || ort > 100) {
+            alert("geçersiz not!");
+        }
+        else {
+            if (ort < 50) {
+                alert("KALDIN!!!!!!!");
+            }
+            else {
+                alert("GEÇTİN KERATA");
+            }
+        }
+    }
+
+// Öğrencinin 2 adet not bilgisi girildikten sonra, ortalama 50 ve üzerinde ise ekrana “Geçti” değilse “Kaldı” yazsın.
+
+</script>

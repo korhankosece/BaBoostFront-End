@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // Soru 7
+    // function Tip(degisken){
+    //     return typeof degisken
+    // }
+
+    // Soru 4
+    // var d = new Date();
+    // function Bir(tarih){
+    //     return new Date(tarih.setDate(tarih.getDate() + 1))
+    // }
+
+    // Soru 6
+    // function Tr(metin){
+    //     return "TR-"+metin
+    // }
+
+    // Soru 2
+    // sayı= [1,51,5489]
+    // metin = ["korhan","korcan"]
+    // function Birles(array1,array2){
+    //     for(i=0;i<array2.length;i++){
+    //         array1.push(array2[i])
+    //     }
+    //     array1.sort()
+    //     return array1
+    // }
+
+    // Soru 5
+    // kareler = []
+    // function Kare(x,y,z){
+    //     kareler.push(x*x,y*y,z*z)
+    //     return kareler
+    // }
+
+    // Soru 1
+    // var sayılar = [1, 2, 3, 5, 4, 7, 8, 9, 10]
+    // function Topla(dizi, sayı) {
+    //     var dizi2 = dizi.slice(0, sayı);
+    //     var toplam = 0;
+    //     console.log(dizi2)
+    //     for (i = 0; i < dizi2.length; i++) {
+    //         toplam = toplam + dizi2[i]
+    //     }
+    //     return toplam
+    // }
+
+    // Soru 8 
+    // function Degis(metin){
+    //     return metin.toUpperCase().replace(" ","")
+    // }
+
+    // Soru 9
+    // function KareToplam(x,y){
+    //     return x*x+y*y
+    // }
+
+    // Soru 10
+    var json = []
+    $.getJSON("https://northwind.now.sh/api/suppliers", function (data) {
+        json.push(data[0])
+    })
+    console.log(json)
+
+    var tipler = []
+    function Getir(x) {
+        for (i = 0; i < x.length; i++) {
+            var y = x[i]
+
+        } 
+        console.log(y[2])
+        // for (j = 0; j < y.length; j++) {
+        //     tipler.push(typeof y[j].values())
+        //     return tipler
+        // }
+    }
+
+</script>

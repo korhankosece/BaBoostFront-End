@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <input type="text" id="girdi2">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var vize = Number(document.getElementById("girdi1").value);
+        var final = Number(document.getElementById("girdi2").value);
+        var ort = (vize*0.4) + (final*0.6)
+
+        if (ort<0 || ort>100) {
+            alert("Geçersiz not girdiniz.");
+            }
+        else{
+            if(ort>=50){
+                alert("GEÇTİN KERATA");
+            }
+            else{
+                alert("KALDIN!!!!!");
+            }
+        }
+    }
+
+</script>

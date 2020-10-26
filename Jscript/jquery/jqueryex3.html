@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <div class="main">
+
+    </div>
+    <input id="girdi1" type="text">
+    <input id="girdi2" type="text">
+    <button>BoooooM</button>
+</body>
+
+</html>
+<script>
+    $('button').click(function () {
+        var x = $("#girdi1").val()
+        var y = $("#girdi2").val()
+
+        $(".main").append("<p id='yazi'></p>")
+        $("#yazi").text(x + " "+ y)
+
+    })
+</script>

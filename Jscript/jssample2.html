@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <input type="text" name="" id="sayi">
+    </div>
+    <div>
+        <input type="text" name="" id="sayi2">
+    </div>
+    <div>
+        <button onclick="Hesap()">Hesapla</button>
+    </div>
+</body>
+</html>
+<script>
+    function Hesap(){
+        var x = document.getElementById("sayi").value;
+        var y = document.getElementById("sayi2").value;
+        // var sonuc = Number(x)+Number(y);
+        var sonuc = +x + +y;
+        console.log(sonuc)
+    }
+    
+</script>

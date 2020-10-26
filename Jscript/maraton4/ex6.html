@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form-group">
+            <label for="userid">UserId</label>
+            <input type="text" class="form-control" id="userid" placeholder="UserId">
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="body">Body</label>
+            <input type="text" class="form-control" id="body" placeholder="Body">
+        </div>
+
+        <button class="btn btn-primary">Add</button>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    
+    $(".btn-primary").click(function () {
+
+        var data1 = new Object()
+        data1.userId = Number($("#userid").val())
+        data1.title = $("#title").val()
+        data1.body = $("#body").val()
+        console.log(data1)
+        var url = "https://jsonplaceholder.typicode.com/posts"
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(data1),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+    })
+</script>

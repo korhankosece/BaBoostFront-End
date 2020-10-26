@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="buton" onmouseover="buyuk()" onmouseout="kucuk()">KorhanKosece</button>
+</body>
+</html>
+<script>
+    function buyuk(){
+        document.getElementById("buton").style.width="64px";
+        document.getElementById("buton").style.height="64px";
+    }
+    function kucuk(){
+        document.getElementById("buton").style.width="";
+        document.getElementById("buton").style.height="";
+    }
+
+</script>

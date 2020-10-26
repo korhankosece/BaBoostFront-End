@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <p id="kutu"></p>
+    <input type="text" id="girdi">
+    <button onclick="bul()">BUL!!!</button>
+</body>
+
+</html>
+<script>
+
+    var liste = ["ankara", "istanbul", "izmir", "kocaeli", "bursa", "antalya", "balıkesir", "yozgat", "edirne", "ağrı"];
+    var rand = Math.floor(Math.random() * 10);
+    var secim = liste[rand];
+    console.log(secim);
+
+    var yanlis = 0;
+
+    var uzun = secim.length;
+    var tire = "_";
+    document.getElementById("kutu").innerHTML = tire.repeat(uzun);
+
+    function bul() {
+
+        var data = document.getElementById("kutu").innerHTML;
+        var tahmin = document.getElementById("girdi").value;
+
+        if (secim.includes(tahmin)) {
+            var yer = secim.indexOf(tahmin);
+
+            document.getElementById("kutu").innerHTML = data.substring(0, yer) + tahmin + data.substring(yer + 1);
+
+            secim = secim.substr(0, yer) + "*" + secim.substr(yer + 1)
+
+        }
+        else {
+            yanlis = Number(x) + Number(1)
+            if (yanlis == 5) {
+                alert("Kaybettiniz!")
+            }
+            else { }
+        }
+    }
+</script>

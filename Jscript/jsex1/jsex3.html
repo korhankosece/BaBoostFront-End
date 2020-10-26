@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="sayi1">
+    </div>
+    <div>
+        <input type="text" id="sayi2">
+    </div>
+    <button onclick="write1()">ROCK N ROLL!!</button>
+    <p id="sonuc"></p>
+</body>
+</html>
+<script>
+    function write1(){
+        var x = document.getElementById("sayi1").value;
+        var y = document.getElementById("sayi2").value;
+        document.getElementById("sonuc").innerHTML = x+y
+
+        
+       
+    }
+
+</script>

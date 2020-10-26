@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var fiyat = document.getElementById("girdi").value;
+        // var fiyat2 = Number(fiyat) + Number(5)
+
+        if (fiyat<=0) {
+            alert("Yanlış Fiyat")
+        }
+        else {
+            if (fiyat >= 100) { 
+                alert("Borcunuz "+ fiyat+ " TL") 
+                }
+            else { 
+                var fiyat2 = Number(fiyat) + Number(5);
+                alert("Borcunuz "+ fiyat2 +" TL") 
+            }
+
+        }
+    }
+
+
+</script>

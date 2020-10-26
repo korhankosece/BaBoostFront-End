@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="girdi1">
+    <div>
+    <button onclick="Ekle()">Ekle</button>
+    </div>
+    <div>
+        <button onclick="Say()">SAY!</button>
+    </div>
+    <div>
+        <button onclick="Cevir()">CEVIR!</button>
+    </div>
+    <input type="text" id="girdi2">
+    <div>
+        <button onclick="Kontrol()">kontrol</button>
+    </div>
+</body>
+</html>
+<script>
+    var liste = []
+    function Ekle(){
+        var veri = document.getElementById("girdi1").value;
+        liste.push(veri)
+        console.log(liste)
+    }
+    function Say(){
+        var sayı = liste.length
+        alert(sayı)
+    }
+    function Cevir(){
+        var cevrik = liste.reverse()
+        console.log(cevrik)
+    }
+
+    function Kontrol(){
+        var veri2 = document.getElementById("girdi2").value;
+        if(liste.include(veri2)){
+            console.log("Eleman Mevcut")
+        }
+        else{
+            console.log("Eleman Yok")
+        }
+    }
+    function Kontrol(){
+        var veri2 = document.getElementById("girdi2").value;
+        if(liste.indexOf(veri2)>=0){
+            console.log("Eleman Mevcut")
+        }
+        else{
+            console.log("Eleman Yok")
+        }
+    }
+</script>
+

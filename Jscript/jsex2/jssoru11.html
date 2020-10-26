@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 400px;
+        }
+
+        #box1 {
+            background-color: aqua;
+        }
+
+        #box2 {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="sayi">
+        <button onclick="Show()">BOOM</button>
+    </div>
+    <div style="display: flex;justify-content: space-between;" id="kapsul">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    
+    var left = 0;
+
+    function Show() {
+        var x = Number(document.getElementById("sayi").value);
+        left = left + x;
+
+        // document.getElementById("box1").style.marginLeft = left + "px"
+        // document.getElementById("box2").style.marginRight = left + "px"
+        
+        document.getElementById("kapsul").style.paddingLeft = left +"px"
+        document.getElementById("kapsul").style.paddingRight = left +"px"
+    }
+
+</script>

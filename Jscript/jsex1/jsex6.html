@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <img id="blatz" src="C:\Users\ba.boost\Desktop\BoostKorhan\hellohtml\photos\bjblaczkowich.jpg" alt="">
+    </div>
+    <div>
+        <label for="">width</label>
+        <input type="text" id="genis">
+    </div>
+    <div>
+        <label for="">height</label>
+        <input type="text" id="yuksek">
+    </div>
+    <button onclick="bom()">ROCK N ROLL!!</button>
+
+</body>
+</html>
+<script>
+    function bom() {
+        document.getElementById("blatz").style.width = document.getElementById("genis").value + "px"
+        document.getElementById("blatz").style.height = document.getElementById("yuksek").value + "px"
+
+    }
+
+</script>

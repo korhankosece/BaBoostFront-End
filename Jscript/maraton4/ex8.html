@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <div class="custom-select" style="width:200px;">
+        <select>
+
+        </select>
+    </div>
+
+    <div>
+        <label for="title">TITLEEE</label>
+        <input id="title" type="text">
+    </div>
+    <div>
+        <label for="body">BODY</label>
+        <input id="body" type="text">
+    </div>
+</body>
+
+</html>
+<script>
+
+    var url = "https://jsonplaceholder.typicode.com/users"
+    var url1 = "https://jsonplaceholder.typicode.com/posts"
+    $.getJSON(url, function (data) {
+        data.forEach(element => {
+            $("select").append(
+                `<option value ="` + element.id + `">` + element.id + `</option>`
+            )
+        });
+    });
+
+    $(document).on("change", "select", function () {
+        var data1 = new Object()
+        data1.userId = $(this).children("option:selected").val()
+        data1.title = $("#title").val()
+        data1.body = $("#body").val()
+        console.log(data1)
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts",
+            type: "POST",
+            data: data1,
+            success: function () {
+                alert("DATA EKLENDİ!");
+            }
+        })
+    })
+</script>

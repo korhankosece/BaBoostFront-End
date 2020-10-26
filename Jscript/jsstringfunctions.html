@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var ad = "Korhan";
+    //ad değişkenini tamamen büyült!
+    console.log(ad.toLocaleUpperCase());
+
+    //tamamen küçült
+    console.log(ad.toLocaleLowerCase());
+
+    //sağ ve soldaki boşlukları at
+    console.log(ad.trim());
+
+    var data = "Manowar iyi bir metal grubudur."
+    var sonuc = data.replace("Manovar","Iron Maiden");
+
+    console.log(sonuc);
+
+    var tel = "+905057916475";
+    console.log(tel.replace("+",""));
+
+    var veri = "Bilge Adam Bilişim"
+    console.log(veri.indexOf("ge"))
+
+    //telefondaki +90 ı kaldır
+    console.log(tel.substring(3));
+
+    var dene = "Bilge  Adam "
+    console.log(dene.replace("  "," "))
+
+    var dene2 = "*****Korhan"
+    console.log(dene2.replace("*****",""))
+
+    var dene3 = "**Korhan**"
+    console.log(dene3.slice(2,8))
+    
+    var dene4 = "Korhan"
+    console.log("***"+dene4+"***")
+
+    var dene5 = "Bilge Adam Bilişim teknolojileri"
+    dene5 = dene5.substr(0,19)+ dene5.substr(19).toLocaleUpperCase()
+    console.log(dene5)
+</script>

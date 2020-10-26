@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At Yarışı</title>
+    <style>
+        #main1 {
+            width: 150px;
+            height: 100px;
+            background-image: url("https://www.hareketligifler.net/data/media/1844/ata-binme-hareketli-resim-0003.gif");
+            background-size: cover;
+            position: relative;
+        }
+
+        #main2 {
+            width: 150px;
+            height: 100px;
+            background-image: url("https://thumbs.gfycat.com/BruisedValidChihuahua-size_restricted.gif");
+            position: relative;
+            background-size: cover;
+        }
+
+        #main3 {
+            width: 150px;
+            height: 100px;
+            background-image: url("https://i.pinimg.com/originals/e8/aa/09/e8aa0917f2164cdafb885d22883dd480.gif");
+            position: relative;
+            background-size: cover;
+        }
+
+        #main4 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSU6I1iEbxO9B7Bb0oFgQV4QazEhbyKTH9ePQ&usqp=CAU");
+            position: absolute;
+            left: 1050px;
+            background-size: 500%;
+            width: 10px;
+            height: 300px;
+        }
+        #container{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <div id="main1"></div>
+            <div id="main2"></div>
+            <div id="main3"></div>
+    
+        </div>
+        <div>
+            <div id="main4"></div>
+        </div>
+    </div>
+
+
+    <button onclick="Git()">!!START!!</button>
+</body>
+
+</html>
+<script>
+
+    function Git() {
+        var left1 = 0;
+        var left2 = 0;
+        var left3 = 0;
+        var sayac = setInterval(() => {
+            if (left1 < 900) {
+                var rastgele = Math.floor(Math.random() * 100);
+                left1 = Number(left1) + Number(rastgele);
+                document.getElementById("main1").style.left = left1 + "px";
+            } else {
+                alert("1NUMARA KAZANDI");
+                clearInterval(sayac)
+            }
+            if (left2 < 900) {
+                var rastgele2 = Math.floor(Math.random() * 100);
+                left2 = Number(left2) + Number(rastgele2);
+                document.getElementById("main2").style.left = left2 + "px";
+            } else {
+                alert("2NUMARA KAZANDI");
+                clearInterval(sayac)
+            }
+            if (left3 < 900) {
+                var rastgele3 = Math.floor(Math.random() * 100);
+                left3 = Number(left3) + Number(rastgele3);
+                document.getElementById("main3").style.left = left3 + "px";
+            } else {
+                alert("3NUMARA KAZANDI");
+                clearInterval(sayac)
+            }
+        }, 500);
+    }
+
+
+
+    console.log(Math.random());
+    Math.floor(2.5);
+    //0 ile 10 arasında rastgele bir TAMSAYI oluştur
+    Math.floor(Math.random() * 10);
+</script>

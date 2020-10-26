@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <span id="a"></span>
+    <span id="b"></span>
+    <span id="c"></span>
+    <span id="d"></span>
+    <span id="e"></span>
+    <span id="f"></span>
+    <button onclick="rastgele()">RaSTg3Le!</button>
+</body>
+
+</html>
+<script>
+
+    function rastgele() {
+        var rand1 = Math.floor(Math.random()*50);
+        var rand2 = Math.floor(Math.random()*50);
+        var rand3 = Math.floor(Math.random()*50);
+        var rand4 = Math.floor(Math.random()*50);
+        var rand5 = Math.floor(Math.random()*50);
+        var rand6 = Math.floor(Math.random()*50);
+        if(rand1>0&&rand2>0&&rand3>0&&rand4>0&&rand5>0&&rand6>0){
+            document.getElementById("a").innerHTML = rand1
+            document.getElementById("b").innerHTML = rand2
+            document.getElementById("c").innerHTML = rand3
+            document.getElementById("d").innerHTML = rand4
+            document.getElementById("e").innerHTML = rand5
+            document.getElementById("f").innerHTML = rand6
+        }
+        else{console.log("DİKKKKKKKKKKKKKAAAAAAAAAAAAAAT")}
+    
+    }
+</script>

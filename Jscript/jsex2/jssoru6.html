@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <input type="text" id="girdi2">
+    <input type="text" id="girdi3">
+    <button onclick="Hesap()">BOM</button>
+</body>
+
+</html>
+<script>
+    function Hesap() {
+        var s1 = Number(document.getElementById("girdi1").value);
+        var s2 = Number(document.getElementById("girdi2").value);
+        var s3 = Number(document.getElementById("girdi3").value);
+        if (s1 > s2 && s1 > s3) {
+            alert("1. SAYI EN BÜYÜK");
+        }
+        else {
+            if (s2 > s1 && s2 > s3) {
+                alert("2. SAYI EN BÜYÜK");
+            }
+            else {
+                alert("3. SAYI EN BÜYÜK");
+            }
+        }
+    }
+
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="girdi">
+    </div>
+    <div>
+        <input type="text" id="cikti">
+    </div>
+    <button onclick="write1()">ROCK N ROLL!!</button>
+</body>
+</html>
+<script>
+    function write1(){
+        document.getElementById("cikti").value = "TR-" + document.getElementById("girdi").value;
+    }
+
+</script>

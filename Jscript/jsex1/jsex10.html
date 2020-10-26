@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height :100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <input id="girdi"onchange="degis()" type="text">
+</body>
+</html>
+<script>
+    function degis(){
+        document.getElementById("container").style.width=document.getElementById("girdi").value + "px";
+    }
+</script>

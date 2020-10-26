@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="girdi1">
+    <button onclick="Koy()">Koy</button>
+    <button onclick="Sirala()">Sırala</button>
+</body>
+
+</html>
+<script>
+    var sayilar = []
+    function Koy() {
+        var deger = document.getElementById("girdi1").value;
+        sayilar.push(deger);
+        console.log(sayilar);
+    }
+    function Sirala() {
+        sayilar.sort();
+        console.log(sayilar);
+    }
+
+
+</script>

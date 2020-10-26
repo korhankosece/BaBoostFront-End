@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>   
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">CompanyName</th>
+                    <th scope="col">ContactName</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+        var url = "https://northwind.now.sh/api/suppliers";
+        $.getJSON(url, function(data) {
+            // console.log(data);
+            data.forEach(function (item) {
+                $("tbody").append("<tr><th scope='row'>****</th><td>" + item.companyName + "</td><td>"+ item.contactName +  "</td><td><button class= 'btn btn-danger'>Delete</button></td></tr>")
+            })
+        });
+
+        $(document).on("click","button",function(){
+            $(this).parent().parent().fadeOut();
+        })
+</script>

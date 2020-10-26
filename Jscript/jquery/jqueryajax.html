@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+    <div>
+        <div>
+            <label for="">Company Name</label>
+            <input type="text" id="sirketad">
+        </div>
+        <div>
+            <label for="">Contact Name</label>
+            <input type="text" id="musteriad"> 
+        </div>
+        <div>
+            <label for="">Street</label>
+            <input type="text" id="sokak"> 
+        </div>
+        <div>
+            <label for="">Country</label>
+            <input type="text" id="sehir"> 
+        </div>
+        <button>Gönder</button>
+    </div>
+    
+</body>
+</html>
+<script>
+    // $("button").click(function(){
+    //     var zart = new Object();
+
+    //     zart.name = $("#ad").val();
+    //     zart.description = $("#aciklama").val();
+
+    //     $.ajax({
+    //         url:"https://northwind.now.sh/api/categories",
+    //         type:"POST",
+    //         data:zart,
+    //         success:function(){
+    //             alert("DATA EKLENDİ!");
+    //         }
+    //     })
+    // })
+
+
+    $("button").click(function(){
+
+        // var data = {
+        //     companyName: $("#sirketad").val(),
+        //     contactName: $("#musteriad").val(),
+        //     adress: {
+        //         street: $("#sokak").val(),
+        //         country: $("#sehir").val(), 
+        //     }
+        // }
+            
+        var data1 = new object();
+
+        data1.companyName = $("#sirketad").val()
+        data1.contactName = $("#musteriad").val()
+
+        var adres = new object();
+
+        adres.street =  $("#sokak").val()
+        adres.country =  $("#sehir").val()
+
+        data1.adress = adres;
+
+
+        $.ajax({
+            url:"https://northwind.now.sh/api/suppliers",
+            type:"POST",
+            data:data1,
+            success:function(){
+                alert("DATA EKLENDİ!");
+            }
+        })
+    })
+</script>
